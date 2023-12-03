@@ -1,7 +1,7 @@
 from twisted.internet import reactor
 from twisted.internet.interfaces import IReadDescriptor
 import os
-import nfqueue
+import netfilterqueue
 from scapy.all import *
 import argparse
 import threading
@@ -96,8 +96,8 @@ def main(args):
         sys.exit("Could not find router MAC address. Closing....")
     if victimMAC == None:
         sys.exit("Could not find victim MAC address. Closing....")
-    print '[*] Router MAC:',routerMAC
-    print '[*] Victim MAC:',victimMAC
+    print('[*] Router MAC:',routerMAC)
+    print('[*] Victim MAC:',victimMAC)
 
     Queued()
     rctr = threading.Thread(target=reactor.run, args=(False,))
