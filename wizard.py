@@ -1,7 +1,7 @@
 from twisted.internet import reactor
 from twisted.internet.interfaces import IReadDescriptor
 import os
-import nfqueue
+import netfilterqueue
 from scapy.all import *
 import threading
 import signal
